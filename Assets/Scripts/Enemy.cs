@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    bool movingRight;
+    [SerializeField] bool movingRight;
     [SerializeField] float moveSpeed = 1f;
 
     Rigidbody2D myRigidbody;
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myBoxCollider = GetComponent<BoxCollider2D>();
-       InvokeRepeating("Enemy", 0f, 0f);
+       InvokeRepeating("ChangeDir", 2f, 2f);
     }
     private void Update()
     {
@@ -27,14 +27,16 @@ public class Enemy : MonoBehaviour
             myRigidbody.velocity = new Vector2(-moveSpeed, 0f);
         }
     }
-    private bool changeDir()
+    private void ChangeDir()
     {
-        return !movingRight;
+       movingRight=!movingRight;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         transform.position = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), transform.localScale.y);
 
+
     }
+    
 }

@@ -4,31 +4,19 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player;
-    public bool flip;
+    public Transform player;
     public float speed;
+    public float jump;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 scale = transform.localScale;
-
-        if(player.transform.position.x > transform.position.x)
+        if (player != null)
+            
         {
-            scale.x = Mathf.Abs(scale.x) * -1 * (flip ? -1 : 1);
-            transform.Translate(x:speed * Time.deltaTime, y: 0, z: 0);
-        }else
-        {
-            scale.x = Mathf.Abs(scale.x) * (flip ? -1 : 1);
-            transform.Translate(x: speed * Time.deltaTime * -1, y: 0, z: 0);
+            Vector3 direction = player.position - transform.position;
+            direction.Normalize();
+
+            transform.Translate(direction * speed * Time.deltaTime);
         }
-
-        transform.localScale = scale;
     }
 }

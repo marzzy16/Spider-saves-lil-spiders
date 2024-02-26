@@ -2,12 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Teleporter: MonoBehaviour
+   
 {
-    [SerializeField] private Transform destination;
+   public Transform destination;
+    GameObject player;
 
-   public Transform Getdestination()
+    private void Awake()
     {
-        return destination;
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if(Vector2.Distance(player.transform.position, transform.position) > 0.3f)
+            {
+               player.transform.position = destination.transform.position;
+            }
+          
+        }
     }
 }
