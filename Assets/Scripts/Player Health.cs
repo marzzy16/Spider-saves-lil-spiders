@@ -2,28 +2,34 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int damageAmount = 10;
+    public float maxHealth = 100f;
+    public float currentHealth;
 
-    internal void TakeDammage(int damageAmount)
+    public HealthBar healthbar;
+
+    void Start()
     {
-        throw new NotImplementedException();
+        currentHealth = maxHealth;
     }
 
-    private void OnTriggerEnter(Collider other)
+   public void TakeDamage(float damageAmout)
     {
-        if (other.CompareTag("Player"))
-        {
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+      currentHealth -= damageAmout;
 
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDammage(damageAmount);
-            }
+        if (currentHealth <= 0)
+        {
+            Die();
         }
-    }  
-   
+    }
+
+    void Die()
+    {
+        Debug.Log("Player has died");
+    }
+  
 } 

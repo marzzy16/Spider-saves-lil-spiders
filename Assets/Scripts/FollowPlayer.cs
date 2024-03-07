@@ -18,5 +18,7 @@ public class FollowPlayer : MonoBehaviour
 
             transform.Translate(direction * speed * Time.deltaTime);
         }
+
+
     }
 }
