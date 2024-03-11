@@ -5,6 +5,8 @@ using UnityEngine;
 public class Teleporter: MonoBehaviour
    
 {
+    public GameObject[] camras;
+
    public Transform destination;
     GameObject player;
 
@@ -20,7 +22,10 @@ public class Teleporter: MonoBehaviour
             if(Vector2.Distance(player.transform.position, transform.position) > 0.3f)
             {
                player.transform.position = destination.transform.position;
+
             }
+            camras[0].SetActive(false);
+            camras[1].SetActive(true);
           
         }
     }
