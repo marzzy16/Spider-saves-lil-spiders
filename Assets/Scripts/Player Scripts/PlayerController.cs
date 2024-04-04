@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float jump;
     public float speed;
     private float Move;
+    private int launchVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(Move * speed, rb.velocity.y);
 
+    }
 
+    public void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawLine(transform.position, transform.forward * 500f);
     }
 }
