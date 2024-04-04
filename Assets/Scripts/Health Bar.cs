@@ -10,15 +10,7 @@ public class HealthBar : MonoBehaviour
 
    void Start()
     {
-        if (Healthslider != null) 
-        {
-            Debug.LogError("Health Bar not assigned to Health Bar script.");
-        }
-
-        if (playerHealth == null)
-        {
-            Debug.LogError("Player Health script not assignd to HealthBar script.");
-        }
+      
 
 #pragma warning disable CS8321 // Local function is declared but never used
         void Update()
