@@ -7,29 +7,28 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    public float currentHealth;
+    public static event Action OnPlayerDamaged;
+    public static event Action OnPlayerDeath;
 
-    public HealthBar healthbar;
+    public float health, maxHealth;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        health = maxHealth;
     }
 
-   public void TakeDamage(float damageAmout)
+   public void TakeDamage(float amount)
     {
-      currentHealth -= damageAmout;
+        health -= amount;
+        OnPlayerDamaged?.Invoke();
 
-        if (currentHealth <= 0)
+
+        if (health <= 0)
         {
-            Die();
+            health = 0;
+            Debug.Log("You're dead");
+            OnPlayerDeath?.Invoke();
         }
     }
 
-    void Die()
-    {
-        Debug.Log("Player has died");
-    }
-  
 } 
