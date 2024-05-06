@@ -152,10 +152,10 @@ TextureImporter:
       name: Black Candle _0
       rect:
         serializedVersion: 2
-        x: 477
-        y: 3869
-        width: 967
-        height: 1735
+        x: 0
+        y: 3840
+        width: 1920
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Black Candle _1
       rect:
         serializedVersion: 2
-        x: 2396
-        y: 3869
-        width: 967
-        height: 1799
+        x: 1920
+        y: 3840
+        width: 1920
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Black Candle _2
       rect:
         serializedVersion: 2
-        x: 477
-        y: 1948
-        width: 967
-        height: 1800
+        x: 0
+        y: 1920
+        width: 1920
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Black Candle _3
       rect:
         serializedVersion: 2
-        x: 2396
-        y: 1948
-        width: 967
-        height: 1735
+        x: 1920
+        y: 1920
+        width: 1920
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: Black Candle _4
       rect:
         serializedVersion: 2
-        x: 477
-        y: 30
-        width: 967
-        height: 1797
+        x: 0
+        y: 0
+        width: 1920
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Black Candle _5
       rect:
         serializedVersion: 2
-        x: 2396
-        y: 30
-        width: 967
-        height: 1735
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
