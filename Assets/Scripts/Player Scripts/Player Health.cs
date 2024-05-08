@@ -4,13 +4,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
-
+    public GameManagerScript game;
     public float health, maxHealth;
+
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            GameManagerScript.gameover();
             Debug.Log("You're dead");
             OnPlayerDeath?.Invoke();
         }
