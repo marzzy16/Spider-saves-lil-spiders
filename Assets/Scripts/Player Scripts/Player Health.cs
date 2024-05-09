@@ -10,7 +10,9 @@ public class PlayerHealth : MonoBehaviour
 {
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
-    public GameManagerScript game;
+    public GameOver game;
+    public ScoreManager score;
+    public GameManagerScript GameManager;
     public float health, maxHealth;
 
 
@@ -28,7 +30,8 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            GameManagerScript.gameover();
+            game.Setup(score.score);
+            GameManager.gameOver();
             Debug.Log("You're dead");
             OnPlayerDeath?.Invoke();
         }
