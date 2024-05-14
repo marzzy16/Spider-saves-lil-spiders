@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -10,5 +11,10 @@ public class GameOver : MonoBehaviour
     {
         gameObject.SetActive(true);
         pointsText.text = score.ToString() + " POINTS";
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
