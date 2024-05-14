@@ -6,8 +6,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerHealth : MonoBehaviour
 {
+    private UIManager uIManager;
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
     public GameOver game;
@@ -15,16 +17,23 @@ public class PlayerHealth : MonoBehaviour
     public GameManagerScript GameManager;
     public float health, maxHealth;
 
+    public UIManager uiManager { get; private set; }
 
     void Start()
     {
         health = maxHealth;
     }
 
-   public void TakeDamage(float amount)
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
+
+    public void TakeDamage(float amount)
     {
         health -= amount;
         OnPlayerDamaged?.Invoke();
+        uiManager.GameOver();
 
 
         if (health <= 0)
