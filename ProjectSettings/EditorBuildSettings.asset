@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/_MainMenu.unity
     guid: fdf658280728e95449992777cd631649
   - enabled: 1
-    path: Assets/spider and lil spider folder/Little spider run.unity
+    path: Assets/Scenes/Little spider run.unity
     guid: 31d992fd6379d1b428817fa28877977f
   - enabled: 1
     path: Assets/Scenes/game over.unity
     guid: 777b1ebdec10c5545a98f1507ecc0e1c
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 88f60f8a6d6c3c84ca0898537061f935
   m_configObjects: {}

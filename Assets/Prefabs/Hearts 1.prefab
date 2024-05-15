@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1588055185621429476}
   - component: {fileID: 5939409364835599382}
   - component: {fileID: 1101524674601497179}
-  - component: {fileID: 5048156199416175794}
   m_Layer: 0
   m_Name: Hearts 1
   m_TagString: Untagged
@@ -92,18 +91,3 @@ MonoBehaviour:
   fullHeart: {fileID: -1821798720, guid: fb2946eced547d34e968a99846036f50, type: 3}
   halfHeart: {fileID: -1396383746, guid: fb2946eced547d34e968a99846036f50, type: 3}
   emptyHeart: {fileID: 212288936, guid: fb2946eced547d34e968a99846036f50, type: 3}
---- !u!114 &5048156199416175794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4731614521368710796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c79b858079dcd4e959c45c2a791f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fullHeart: {fileID: 0}
-  halfHeart: {fileID: 0}
-  emptyHeart: {fileID: 0}

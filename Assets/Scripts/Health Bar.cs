@@ -58,10 +58,13 @@ public class HealthBar : MonoBehaviour
 
     public void ClearHearts()
     {
-        foreach(Transform t in transform)
+        foreach(HealthHearts heart in hearts)
         {
-            Destroy(t.gameObject); 
+            if(heart != null)
+                Destroy(heart.gameObject); 
         }
         hearts = new List<HealthHearts>(); 
     }
+
+
 }
